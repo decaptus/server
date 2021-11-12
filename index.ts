@@ -19,9 +19,9 @@ app.use(morgan("dev"));
 
 
 //Debo crear una ruta nueva para el nuevo objeto que quiera crear. NO OLVIDAR IMPORTARLAS!!
-app.use('/tutor', tutoringsRoutes);
+app.use('/vacunas', tutoringsRoutes);
 app.use('/question',questionsRoutes);
-app.use('/students', studentsRoutes);
+app.use('/personas', studentsRoutes);
 
 //En el momento que quiera crear una base de dato nueva para el examen, solo tengo que cambiar
 //El 'pruebaDB'

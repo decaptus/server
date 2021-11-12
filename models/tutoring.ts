@@ -1,27 +1,19 @@
 import { Schema, model, Document} from 'mongoose';
 
 // 1. Create an interface representing a document in MongoDB.
- export interface TutoringI extends Document {                                                                     //interface o clase??
-    title: string;
-    description: string;
-    creator: string;
-    picture?: string;
-    price: number;
+ export interface VacunasI {                                                                     //interface o clase??
+    Nombre: string;
   }
 
 
   // 2. Create a Schema corresponding to the document interface.
-const TutoringSchema = new Schema<TutoringI>({
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    creator: { type: String, required: true },
-    picture: String,
-    price: { type: Number, required: true }
+const VacunasSchema = new Schema<VacunasI>({
+  Nombre: { type: String, required: true },
   });
 
 
 // 3. Create a Model.
-export const TutoringModel = model<TutoringI>('Tutoring', TutoringSchema);                         //porq no me deja usar export default cuando tengo mas de un export?
+export const VacunasModel = model<VacunasI>('Vacunas', VacunasSchema);                         //porq no me deja usar export default cuando tengo mas de un export?
 
 
 
